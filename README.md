@@ -18,3 +18,6 @@ I'm Keros Rodrigues, a machine learning specialist pasionate about AI safety.
 [LinkedIn](https://www.linkedin.com/in/keros-rodrigues/)
 
 [GitHub](https://github.com/khrod/)
+
+## Contact
+keroshrod[at]gmail[dot]com
