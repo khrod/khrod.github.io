@@ -1,10 +1,15 @@
 # khrod.github.io
-Personal website
+
+Personal website, still a work in progress...
 
 ## About
+
 I'm Keros Rodrigues, a machine learning specialist pasionate about AI safety.
 
 ## Projects
+
+*Notebooks of past projects*
+
 [Project 1](https://www.khrod.github.io/project1/)
 
 [Project 2](https://www.khrod.github.io/project2/)
