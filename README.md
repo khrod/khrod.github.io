@@ -11,6 +11,23 @@ I'm Keros Rodrigues, a machine learning specialist pasionate about AI safety.
 
 [...](https://www.khrod.github.io/project3/)
 
+## Experience
+**Machine Learning Researcher @ RBC**
+
+[Devloper/Data Scientist @ RBC Amplify](https://www.utoronto.ca/news/u-t-students-awarded-rbc-amplify-s-most-disruptive-prize-ai-used-monitoring-e-transfers)
+
+Teaching Assistant @ University of Toronto
+
+Software/Hardware Developer @ Wheeler Microfluidics Lab
+
+Developer @ RBC
+
+## Volunteering
+
+First-Year Computer Science Peer Mentor @ University of Toronto
+
+[Mentor @ Ladies Learning Code](https://notablelife.com/python-ladies-learning-code/)
+
 ## Blog
 *TODO*
 
