@@ -10,11 +10,15 @@ I'm Keros Rodrigues, a machine learning specialist pasionate about AI safety.
 
 ### Professional
 
-*Projects worked on as part of my job*
+*Projects worked on as part of my job/class*
 
 [**Contact Centre Fraud** - Mitigating the risks of fraudlent calls into the RBC Contact Centre ](https://www.khrod.github.io/)
 
 [**Transfer Volume Predictions** - Predicting transfer volumes to reduce colateral](https://www.khrod.github.io/)
+
+[**inQuery** - Machine learning model and investigative tool created to tackle financial crime](https://www.khrod.github.io/)
+
+[**Microdrop** - Using microfludic technology to detect Ebola](https://www.khrod.github.io/)
 
 ### Personal
 
