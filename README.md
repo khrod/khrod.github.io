@@ -2,7 +2,7 @@
 Personal website
 
 ## About
-I'm a machine learning specialist pasionate about AI safety.
+I'm Keros Rodrigues, a machine learning specialist pasionate about AI safety.
 
 ## Projects
 [Project 1](https://www.khrod.github.io/project1/)
