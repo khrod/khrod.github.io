@@ -1,4 +1,4 @@
-# Keros Rodrigues
+# khrod.github.io
 Personal website
 
 ## About
