@@ -12,7 +12,8 @@ I'm Keros Rodrigues, a machine learning specialist pasionate about AI safety.
 [...](https://www.khrod.github.io/project3/)
 
 ## Blog
-TODO
+*TODO*
+
 ## Links
 [LinkedIn](https://www.linkedin.com/in/keros-rodrigues/)
 
