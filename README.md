@@ -14,7 +14,7 @@ I'm Keros Rodrigues, a machine learning specialist pasionate about AI safety.
 
 [**Contact Centre Fraud** - Mitigating the risks of fraudlent calls into the RBC Contact Centre ](https://www.khrod.github.io/)
 
-[**Transfer Volume Predictions** - Predicting transfer volumes to reduce colateral](https://www.khrod.github.io/)
+[**Transfer Volume Predictions** - Predicting transfer volumes to reduce colateral of high value payments](https://www.khrod.github.io/)
 
 [**inQuery** - Machine learning model and investigative tool created to tackle financial crime](https://www.khrod.github.io/)
 
