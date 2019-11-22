@@ -12,21 +12,21 @@ I'm Keros Rodrigues, a machine learning specialist pasionate about AI safety.
 
 *Projects worked on as part of my job/class*
 
-[**Contact Centre Fraud** - Mitigating the risks of fraudlent calls into the RBC Contact Centre ](https://www.khrod.github.io/)
+[**Contact Centre Fraud** - Mitigating the risks of fraudlent calls into the RBC Contact Centre ](https://khrod.github.io/)
 
-[**Transfer Volume Predictions** - Predicting transfer volumes to reduce colateral of high value payments](https://www.khrod.github.io/)
+[**Transfer Volume Predictions** - Predicting transfer volumes to reduce colateral of high value payments](https://khrod.github.io/)
 
-[**Autonomous Driving** - Deep learning models for autonomous driving tasks](https://www.khrod.github.io/)
+[**Autonomous Driving** - Deep learning models for autonomous driving tasks](https://khrod.github.io/)
 
-[**inQuery** - Machine learning model and investigative tool created to tackle financial crime](https://www.khrod.github.io/)
+[**inQuery** - Machine learning model and investigative tool created to tackle financial crime](https://khrod.github.io/)
 
-[**Microdrop** - Using microfludic technology to detect Ebola](https://www.khrod.github.io/)
+[**Microdrop** - Using microfludic technology to detect Ebola](https://khrod.github.io/)
 
 ### Personal
 
 *Projects I've worked on for fun*
 
-[**Dithering** - Investigating the use of dithering to binarize image data and it's effects on neural networks](https://www.khrod.github.io/)
+[**Dithering** - Investigating the use of dithering to binarize image data and it's effects on neural networks](https://khrod.github.io/)
 
 ## Experience
 
