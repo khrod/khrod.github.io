@@ -26,7 +26,7 @@ I'm Keros Rodrigues, a machine learning specialist pasionate about AI safety.
 
 *Projects I've worked on for fun*
 
-[**Dithering** - Investigating the use of dithering to binarize image data and it's effects on neural networks](https://khrod.github.io/)
+[**Dithering** - Investigating the use of dithering to binarize image data and it's effects on convolutional neural networks](https://khrod.github.io/)
 
 ## Experience
 
