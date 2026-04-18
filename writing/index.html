@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing — Keros Rodrigues</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #faf9f7;
+      --text: #1c1c1a;
+      --muted: #6b6b67;
+      --border: #e2e0db;
+      --accent: #2a5f4f;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      padding: 4rem 1.5rem 6rem;
+    }
+
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .back-link {
+      display: inline-block;
+      font-size: 0.875rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 3rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      margin-bottom: 3.5rem;
+    }
+
+    header h1 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 2.25rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin-bottom: 3rem;
+    }
+
+    .post-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .post-item a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .post-item a:hover {
+      color: var(--accent);
+    }
+
+    .post-item .post-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .post-item .post-description {
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.8rem;
+      color: var(--border);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back-link" href="../">← Keros Rodrigues</a>
+
+    <header>
+      <h1>Writing</h1>
+      <p>Occasional thoughts on ML, edtech, and other things.</p>
+    </header>
+
+    <hr class="divider" />
+
+    <div class="post-list">
+
+      <div class="post-item">
+        <a href="musings-on-free-will-and-learning.html">Musings on Free Will, Learning, and Why Netflix Has It Easy</a>
+        <div class="post-meta">April 17, 2026</div>
+        <div class="post-description">Why constrained environments might actually be better for personalization than open ones.</div>
+      </div>
+
+    </div>
+
+    <footer>
+      &copy; 2026 Keros Rodrigues
+    </footer>
+  </main>
+</body>
+</html>

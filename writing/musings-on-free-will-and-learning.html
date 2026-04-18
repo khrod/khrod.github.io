@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Musings on Free Will, Learning, and Why Netflix Has It Easy — Keros Rodrigues</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #faf9f7;
+      --text: #1c1c1a;
+      --muted: #6b6b67;
+      --border: #e2e0db;
+      --accent: #2a5f4f;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      padding: 4rem 1.5rem 6rem;
+    }
+
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .back-link {
+      display: inline-block;
+      font-size: 0.875rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 3rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Post header */
+    .post-header {
+      margin-bottom: 3rem;
+    }
+
+    .post-header h1 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.875rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+
+    .post-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* Prose */
+    article p {
+      margin-bottom: 1.25rem;
+      font-size: 0.975rem;
+    }
+
+    article h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 2.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    article em {
+      font-style: italic;
+    }
+
+    article strong {
+      font-weight: 600;
+    }
+
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.8rem;
+      color: var(--border);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back-link" href="index.html">← Writing</a>
+
+    <div class="post-header">
+      <h1>Musings on Free Will, Learning, and Why Netflix Has It Easy</h1>
+      <div class="post-meta">April 17, 2026</div>
+    </div>
+
+    <article>
+      <p>Netflix knows you better than your therapist. Amazon knows what you need before you do. TikTok has basically reverse-engineered your dopamine system.</p>
+
+      <p>And then there's edtech. Where everyone still gets the same lecture, the same practice problems, the same exam.</p>
+
+      <p>The common assumption is that this is just the nature of the beast. Education is <em>structured</em>. Students don't have free will over what they consume. There's a curriculum, due dates, a syllabus. Without free choice, you don't get rich behavioral signals. Without rich signals, you can't personalize. So edtech gets a shrug and a "well, at least we have rubrics."</p>
+
+      <p>I think this is wrong. And I think the mistake is actually kind of interesting.</p>
+
+      <hr class="divider" />
+
+      <h2>The free will assumption</h2>
+
+      <p>The reasoning goes like this: recommendation systems on consumer platforms are powerful because users can do anything. Follow anyone. Search for anything. Buy anything. Click anywhere. All of that unconstrained behavior generates dense, high-entropy data: clear preferences, strong signals, long tails.</p>
+
+      <p>Edtech, by contrast, has a fixed curriculum. Required content. Heavy instructor control over pacing. Students can't exactly "scroll past" the chain rule if it's on next week's exam.</p>
+
+      <p>To be fair, this isn't true of all edtech. Duolingo and Khan Academy have been doing sophisticated personalization for years, but their model looks a lot more like a consumer app. Self-paced, gamified, high user autonomy. The harder, largely unsolved problem is institutional edtech: the LMS, the lecture platform, the course tools where most students actually spend their time.</p>
+
+      <p>So the argument is: no free will &rarr; no preference signals &rarr; no personalization.</p>
+
+      <p>It sounds reasonable. It's also missing something.</p>
+
+      <hr class="divider" />
+
+      <h2>Learning behavior is the signal</h2>
+
+      <p>Students in a structured environment might not choose <em>what</em> they study. But they reveal an enormous amount about <em>how</em> they learn.</p>
+
+      <p>Do they attempt problems before asking for help, or after? Do they give up after one wrong answer or keep trying? Do they gravitate toward worked examples or practice questions? Do they cram the night before or spread their studying out? When they get something wrong, do they want to know why, or just move on?</p>
+
+      <p>None of these require free will over the curriculum. They're all observable within a constrained environment. And every one of them is a preference signal.</p>
+
+      <p>In education, learning behavior is your recommendation signal. The question isn't "what do they want to watch?" It's "how do they learn, and what do they need next?"</p>
+
+      <hr class="divider" />
+
+      <h2>Why constraints might actually help</h2>
+
+      <p>Here's where it gets interesting.</p>
+
+      <p>Open-ended platforms have a personalization problem that's easy to miss: <em>noise</em>. When users can do anything, it's genuinely hard to know why they did what they did. Signal and confound are tangled together.</p>
+
+      <p>Constrained environments are different. When five hundred students all attempt the same calculus problem on the same day and forty percent make the exact same mistake, you know something. You didn't have to infer it from browsing patterns or hope someone left a review. The structure handed it to you.</p>
+
+      <p>You know exactly what was presented, when, and to whom. Cold start, brutal on consumer platforms, is less brutal here. You still have limited signal in week one. But the cohort gives you a baseline immediately, and if a student took a prerequisite course, you're not starting from zero at all.</p>
+
+      <p>The structure isn't noise. It's a built-in experimental framework. The kind of clean, interpretable signal that Netflix and TikTok, swimming in behavioral chaos, would actually envy.</p>
+
+      <p>The true constraint isn't lack of free will. It's lack of existing UX designed to elicit preference signals. Consumer apps have spent decades optimizing every interaction to generate data: the like button, the rating prompt, the search bar. Edtech built interfaces for content delivery. The data environment was always there. The interface to surface it wasn't.</p>
+
+      <hr class="divider" />
+
+      <h2>Closing the gap</h2>
+
+      <p>Part of the answer is about instrumentation. The signals are already there, hiding in plain sight. Time between a problem appearing and a student's first attempt is a confidence signal. Number of attempts before giving up tells you something about persistence and frustration tolerance. Which parts of an explanation a student re-reads, or skips entirely, reveals how they process information. None of this requires new infrastructure. It requires paying attention to what's already happening.</p>
+
+      <p>The more interesting half is designing new interactions that actively elicit signal. Explanation style choices ("walk me through the steps" vs. "give me the intuition"). A difficulty self-assessment after a problem. A "show me a different approach" button. Small additions that feel like features to the student and function as preference revelation to the system.</p>
+
+      <p>And then there's conversation. AI tutors don't just deliver content. The act of conversing with one is itself signal generation. When a student types "I understand the power rule but I keep getting the chain rule wrong," they've done something no click or scroll can match: they've externalized their confusion in natural language. The way they ask, what they ask next, whether they accept the first explanation or push back. All of it is rich, structured signal. Consumer apps spent decades engineering preference revelation into every tap and swipe. Edtech is only now getting its equivalent. And it skipped straight to conversation.</p>
+
+      <hr class="divider" />
+
+      <h2>A different goal</h2>
+
+      <p>Here's what I keep coming back to though.</p>
+
+      <p>Consumer personalization is ultimately optimized for one thing: engagement. Time on app. Clicks. Conversions. The signal and the goal are perfectly aligned. Keep someone watching, you win. Netflix doesn't particularly care if you became a better person; it cares that you didn't cancel your subscription.</p>
+
+      <p>Educational personalization has a fundamentally different goal: growth. Not engagement for its own sake, but progress. Filling gaps, correcting misconceptions, building toward something.</p>
+
+      <p>The constraints that make edtech look like a harder personalization problem are also what give it a more honest purpose. You're not trying to hack someone's attention loop. You're trying to meet a student where they are and help them get somewhere better.</p>
+
+      <p>That's not a limitation. That's actually the point.</p>
+    </article>
+
+    <footer>
+      &copy; 2026 Keros Rodrigues
+    </footer>
+  </main>
+</body>
+</html>
