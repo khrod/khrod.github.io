@@ -1,258 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Keros Rodrigues</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital@0;1&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #faf9f7;
-      --text: #1c1c1a;
-      --muted: #6b6b67;
-      --border: #e2e0db;
-      --accent: #2a5f4f;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Keros Rodrigues</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f5f5f3;
+    --paper-2:#edece8;
+    --ink:#141412;
+    --ink-2:#3a3a36;
+    --muted:#8a8a84;
+    --rule:#d8d7d1;
+    --accent:#3a6a4a;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{background:var(--paper)}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"General Sans","Söhne",system-ui,sans-serif;
+    font-size:15px;
+    line-height:1.55;
+    padding:2.5rem 1.5rem 5rem;
+    -webkit-font-smoothing:antialiased;
+    font-feature-settings:"ss01","cv11";
+  }
+  main{max-width:720px;margin:0 auto}
 
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  /* Sheet header */
+  .sheet{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:1rem;
+    padding-bottom:1rem;
+    margin-bottom:3.25rem;
+    border-bottom:1px solid var(--ink);
+    align-items:end;
+  }
+  .sheet .id{
+    font-family:"JetBrains Mono",monospace;
+    font-size:.68rem;letter-spacing:.04em;
+    color:var(--muted);
+    line-height:1.9;
+    text-transform:uppercase;
+  }
+  .sheet .id b{color:var(--ink-2);font-weight:500}
+  .sheet .ver{
+    font-family:"JetBrains Mono",monospace;
+    font-size:.68rem;letter-spacing:.04em;
+    color:var(--muted);
+    text-transform:uppercase;text-align:right;
+  }
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Inter', system-ui, sans-serif;
-      font-size: 16px;
-      line-height: 1.65;
-      padding: 4rem 1.5rem 6rem;
-    }
+  /* Hero */
+  .hero{margin-bottom:3.5rem}
+  .hero h1{
+    font-family:"General Sans",sans-serif;
+    font-weight:500;
+    font-size:clamp(2rem,4.5vw,2.85rem);
+    letter-spacing:-0.035em;
+    line-height:1.05;
+    margin-bottom:.35rem;
+  }
+  .hero .role{
+    font-family:"JetBrains Mono",monospace;
+    font-size:.75rem;letter-spacing:.02em;color:var(--muted);
+    margin-bottom:2rem;
+  }
+  .hero .role .pill{
+    display:inline-flex;align-items:center;gap:.4rem;
+    padding:.1rem .4rem;border:1px solid var(--rule);border-radius:3px;
+    color:var(--ink-2);
+  }
+  .hero .role .pill::before{
+    content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);
+    box-shadow:0 0 0 3px rgba(58,106,74,.15);
+  }
+  .hero .bio{
+    font-size:1.05rem;
+    color:var(--ink-2);
+    line-height:1.6;
+    max-width:560px;
+    text-wrap:pretty;
+  }
+  .hero .bio .italic{
+    font-family:"Instrument Serif",Georgia,serif;
+    font-style:italic;font-size:1.15em;
+    color:var(--ink);
+  }
 
-    main {
-      max-width: 640px;
-      margin: 0 auto;
-    }
+  /* Nav */
+  nav.contact{
+    display:flex;flex-wrap:wrap;gap:.5rem;
+    margin-top:1.75rem;
+  }
+  nav.contact a{
+    font-family:"JetBrains Mono",monospace;
+    font-size:.72rem;letter-spacing:.02em;
+    color:var(--ink-2);text-decoration:none;
+    padding:.4rem .65rem;
+    border:1px solid var(--rule);
+    border-radius:3px;
+    background:var(--paper);
+    transition:border-color .15s,background .15s,color .15s;
+    display:inline-flex;align-items:center;gap:.4rem;
+  }
+  nav.contact a::before{
+    content:"→";opacity:.5;transition:transform .15s;
+  }
+  nav.contact a:hover{
+    border-color:var(--ink);color:var(--ink);background:var(--paper-2);
+  }
+  nav.contact a:hover::before{transform:translateX(2px)}
 
-    /* Header */
-    header {
-      margin-bottom: 3.5rem;
-    }
+  /* Section header */
+  .section{margin:3.5rem 0}
+  .section-head{
+    display:grid;
+    grid-template-columns:7rem 1fr;
+    gap:1.25rem;
+    align-items:baseline;
+    padding-bottom:.5rem;
+    border-bottom:1px solid var(--rule);
+    margin-bottom:1.75rem;
+  }
+  .section-head .tag{
+    font-family:"JetBrains Mono",monospace;
+    font-size:.68rem;letter-spacing:.06em;
+    color:var(--muted);text-transform:uppercase;
+  }
+  .section-head .tag span{color:var(--ink-2)}
+  .section-head h2{
+    font-family:"General Sans",sans-serif;
+    font-weight:500;
+    font-size:1.1rem;
+    letter-spacing:-0.015em;
+    color:var(--ink);
+  }
 
-    header h1 {
-      font-family: 'Lora', Georgia, serif;
-      font-size: 2.25rem;
-      font-weight: 400;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-      margin-bottom: 0.75rem;
-    }
+  /* Experience */
+  .xp-row{
+    display:grid;
+    grid-template-columns:7rem 1fr;
+    gap:1.25rem;
+    padding:1.25rem 0;
+    border-bottom:1px dashed var(--rule);
+    align-items:baseline;
+  }
+  .xp-row:last-child{border-bottom:none}
+  .xp-date{
+    font-family:"JetBrains Mono",monospace;
+    font-size:.72rem;
+    color:var(--muted);
+    padding-top:.2rem;
+    font-feature-settings:"tnum";
+  }
+  .xp-date b{color:var(--ink-2);font-weight:500}
+  .xp-body .role{
+    font-family:"General Sans",sans-serif;
+    font-weight:500;
+    font-size:1rem;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+    margin-bottom:.15rem;
+    line-height:1.35;
+  }
+  .xp-body .role .at{color:var(--muted);font-weight:400}
+  .xp-body .co{
+    font-family:"JetBrains Mono",monospace;
+    font-size:.72rem;color:var(--ink-2);
+    margin-bottom:.65rem;
+  }
+  .xp-body ul{
+    list-style:none;
+    display:flex;flex-direction:column;gap:.3rem;
+  }
+  .xp-body li{
+    font-size:.9rem;color:var(--ink-2);line-height:1.5;
+    padding-left:1.15rem;position:relative;
+    text-wrap:pretty;
+  }
+  .xp-body li::before{
+    content:"▸";
+    position:absolute;left:0;top:0;
+    color:var(--muted);font-size:.7rem;
+    font-family:"JetBrains Mono",monospace;
+  }
 
-    header p {
-      color: var(--muted);
-      font-size: 0.95rem;
-      max-width: 520px;
-    }
+  /* Soon */
+  .soon{
+    font-family:"Instrument Serif",Georgia,serif;
+    font-variation-settings:"opsz" 24;
+    font-style:italic;font-size:1.05rem;color:var(--muted);
+  }
 
-    /* Nav links */
-    nav {
-      margin-top: 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.25rem 1.25rem;
-    }
+  /* Education */
+  .edu-row{
+    display:grid;grid-template-columns:7rem 1fr;gap:1.25rem;
+    padding:1rem 0;align-items:baseline;
+  }
+  .edu-row .edu-date{
+    font-family:"JetBrains Mono",monospace;
+    font-size:.72rem;color:var(--muted);
+    font-feature-settings:"tnum";
+  }
+  .edu-row .edu-date b{color:var(--ink-2);font-weight:500}
+  .edu-row .degree{
+    font-family:"General Sans",sans-serif;font-weight:500;font-size:1rem;
+    letter-spacing:-0.01em;margin-bottom:.15rem;
+  }
+  .edu-row .school{font-family:"JetBrains Mono",monospace;font-size:.72rem;color:var(--ink-2)}
 
-    nav a {
-      font-size: 0.875rem;
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 500;
-    }
+  /* Footer */
+  footer{
+    margin-top:4.5rem;
+    padding-top:1.25rem;
+    border-top:1px solid var(--rule);
+    font-family:"JetBrains Mono",monospace;
+    font-size:.68rem;letter-spacing:.04em;
+    color:var(--muted);text-transform:uppercase;
+  }
 
-    nav a:hover {
-      text-decoration: underline;
+  @media(max-width:560px){
+    .sheet,.section-head,.xp-row,.edu-row{
+      grid-template-columns:1fr;gap:.35rem;
     }
-
-    /* Sections */
-    section {
-      margin-bottom: 3rem;
-    }
-
-    section h2 {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 1.25rem;
-    }
-
-    /* Experience */
-    .experience-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.75rem;
-    }
-
-    .experience-item {}
-
-    .experience-item .role {
-      font-weight: 500;
-      font-size: 0.95rem;
-    }
-
-    .experience-item .company-line {
-      font-size: 0.875rem;
-      color: var(--muted);
-      margin-bottom: 0.4rem;
-    }
-
-    .experience-item .company-line span {
-      color: var(--muted);
-    }
-
-    .experience-item ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 0.4rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-    }
-
-    .experience-item ul li {
-      font-size: 0.875rem;
-      color: var(--muted);
-      padding-left: 1rem;
-      position: relative;
-    }
-
-    .experience-item ul li::before {
-      content: '–';
-      position: absolute;
-      left: 0;
-      color: var(--border);
-    }
-
-    hr.divider {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin-bottom: 3rem;
-    }
-
-    /* Footer */
-    footer {
-      margin-top: 4rem;
-      font-size: 0.8rem;
-      color: var(--border);
-    }
-  </style>
+    .section-head{padding-bottom:.75rem}
+    .xp-row{padding:1rem 0}
+  }
+</style>
 </head>
 <body>
-  <main>
-    <header>
-      <h1>Keros Rodrigues</h1>
-      <p>I've been fascinated by how intelligent systems work for as long as I can remember — how do you build something that thinks? CS gave me the language to start answering that question, and ML gave me the tools. I'm now a Senior Data Scientist at Top Hat building generative AI products for post-secondary education. What keeps me going: the belief that technology, scaled well, can make quality education genuinely accessible. Outside of work I do BJJ, hike, and build things with my hands.</p>
-      <nav>
-        <a href="https://www.linkedin.com/in/keros-rodrigues/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/khrod/" target="_blank" rel="noopener">GitHub</a>
-        <a href="mailto:keroshrod@gmail.com">Email</a>
-        <a href="writing/">Writing</a>
-      </nav>
-    </header>
+<main>
 
-    <hr class="divider" />
+  <div class="sheet">
+    <div class="id">
+      <b>KEROS.RODRIGUES</b> &nbsp;·&nbsp; TORONTO, CA &nbsp;·&nbsp; 43.6532°N / 79.3832°W
+    </div>
+    <div class="ver">v.2026.04</div>
+  </div>
 
-    <section>
+  <section class="hero">
+    <h1>Keros Rodrigues</h1>
+    <div class="role">
+      <span class="pill">Senior Data Scientist · Top Hat</span>
+    </div>
+    <p class="bio">For as long as I can remember I've been fascinated by <span class="italic">how intelligent systems work</span> — how do you build something that thinks? Computer science gave me the language. Machine learning gave me the tools. Today I'm a Senior Data Scientist at Top Hat, building generative AI for post-secondary education.</p>
+
+    <nav class="contact">
+      <a href="https://www.linkedin.com/in/keros-rodrigues/">linkedin</a>
+      <a href="https://github.com/khrod/">github</a>
+      <a href="mailto:keroshrod@gmail.com">email</a>
+      <a href="writing/">writing</a>
+    </nav>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div class="tag"><span>01</span> / EXP</div>
       <h2>Experience</h2>
-      <div class="experience-list">
+    </div>
 
-        <div class="experience-item">
-          <div class="role">Senior Data Scientist – Generative AI</div>
-          <div class="company-line">Top Hat &middot; <span>Dec 2024 – present</span></div>
-          <ul>
-            <li>Designed and productionized agentic AI endpoints using custom agents built with Google ADK to generate personalized practice content from real-time student performance signals</li>
-            <li>Implemented a recommendation engine using BERTopic to create personalized AI-generated practice sets for students</li>
-          </ul>
-        </div>
-
-        <div class="experience-item">
-          <div class="role">Data Scientist – Generative AI</div>
-          <div class="company-line">Top Hat &middot; <span>Jul 2023 – Dec 2024</span></div>
-          <ul>
-            <li>Implemented a fine-tuned RAG chatbot using ChatGPT, DSPy, and pgvector that provides tutoring to post-secondary students (100k+ users per semester)</li>
-            <li>Implemented an AI question generator used by professors to automatically generate multiple-choice questions from their textbooks and slides</li>
-          </ul>
-        </div>
-
-        <div class="experience-item">
-          <div class="role">Data Scientist – Forecasting</div>
-          <div class="company-line">Shopify &middot; <span>Jun 2022 – May 2023</span></div>
-          <ul>
-            <li>Implemented a Time Series Transformer forecasting product demand to optimize inventory and labor planning — improved accuracy by 35%, reduced bias 3×</li>
-            <li>Developed an XGBoost model to predict inbound shipment errors, saving US$1MM per year</li>
-          </ul>
-        </div>
-
-        <div class="experience-item">
-          <div class="role">Data Scientist Lead – R&amp;D, AI</div>
-          <div class="company-line">Creative Destruction Lab &middot; <span>Dec 2021 – Jun 2022</span></div>
-          <ul>
-            <li>Led a team building a BERT model that predicts a startup's likelihood of raising capital</li>
-            <li>Led a team building a RoBERTa model that predicts an early-stage startup's next objective</li>
-          </ul>
-        </div>
-
-        <div class="experience-item">
-          <div class="role">Data Scientist – R&amp;D, AI</div>
-          <div class="company-line">Creative Destruction Lab &middot; <span>Jun 2020 – Dec 2021</span></div>
-          <ul>
-            <li>Developed an embedding model using PyTorch to pair startups with mentors</li>
-            <li>Developed a few-shot NLP model to predict a startup's industry from written descriptions</li>
-          </ul>
-        </div>
-
-        <div class="experience-item">
-          <div class="role">Machine Learning Researcher – Payments</div>
-          <div class="company-line">Royal Bank of Canada &middot; <span>May 2019 – Jun 2020</span></div>
-          <ul>
-            <li>Researched insider trading detection model in partnership with Capital Markets</li>
-            <li>Built ensemble model to detect fraudulent calls into the RBC Advice Center</li>
-            <li>Built a time series model forecasting wire transfer volumes with 94% accuracy</li>
-          </ul>
-        </div>
-
-        <div class="experience-item">
-          <div class="role">Data Scientist Intern – Amplify</div>
-          <div class="company-line">Royal Bank of Canada &middot; <span>May 2018 – Aug 2018</span></div>
-          <ul>
-            <li>Developed an active learning model to detect criminal transactions within e-transfers — patent filed</li>
-          </ul>
-        </div>
-
+    <div class="xp-row">
+      <div class="xp-date">DEC 2024<br/><b>Present</b></div>
+      <div class="xp-body">
+        <div class="role">Senior Data Scientist <span class="at">—</span> Generative AI</div>
+        <div class="co">Top Hat · Toronto</div>
+        <ul>
+          <li>Designed and productionized agentic AI endpoints using custom agents built with Google ADK to generate personalized practice content from real-time student performance signals</li>
+          <li>Implemented a recommendation engine using BERTopic to create personalized AI-generated practice sets for students</li>
+        </ul>
       </div>
-    </section>
+    </div>
 
-    <section>
+    <div class="xp-row">
+      <div class="xp-date">JUL 2023<br/><b>DEC 2024</b></div>
+      <div class="xp-body">
+        <div class="role">Data Scientist <span class="at">—</span> Generative AI</div>
+        <div class="co">Top Hat</div>
+        <ul>
+          <li>Implemented a fine-tuned RAG chatbot with ChatGPT, DSPy, and pgvector that tutors post-secondary students — 100k+ users per semester</li>
+          <li>Shipped an AI question generator professors use to automatically produce multiple-choice questions from their textbooks and slides</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="xp-row">
+      <div class="xp-date">JUN 2022<br/><b>MAY 2023</b></div>
+      <div class="xp-body">
+        <div class="role">Data Scientist <span class="at">—</span> Forecasting</div>
+        <div class="co">Shopify</div>
+        <ul>
+          <li>Implemented a Time Series Transformer forecasting product demand to optimize inventory and labor planning — 35% accuracy gain, 3× bias reduction</li>
+          <li>Developed an XGBoost model to predict inbound shipment errors, saving US$1MM per year</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="xp-row">
+      <div class="xp-date">DEC 2021<br/><b>JUN 2022</b></div>
+      <div class="xp-body">
+        <div class="role">Data Scientist Lead <span class="at">—</span> R&amp;D, AI</div>
+        <div class="co">Creative Destruction Lab</div>
+        <ul>
+          <li>Led a team building a BERT model that predicts a startup's likelihood of raising capital</li>
+          <li>Led a team building a RoBERTa model that predicts an early-stage startup's next objective</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="xp-row">
+      <div class="xp-date">JUN 2020<br/><b>DEC 2021</b></div>
+      <div class="xp-body">
+        <div class="role">Data Scientist <span class="at">—</span> R&amp;D, AI</div>
+        <div class="co">Creative Destruction Lab</div>
+        <ul>
+          <li>Developed a PyTorch embedding model to pair startups with mentors</li>
+          <li>Developed a few-shot NLP model to predict a startup's industry from written descriptions</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="xp-row">
+      <div class="xp-date">MAY 2019<br/><b>JUN 2020</b></div>
+      <div class="xp-body">
+        <div class="role">Machine Learning Researcher <span class="at">—</span> Payments</div>
+        <div class="co">Royal Bank of Canada</div>
+        <ul>
+          <li>Researched an insider trading detection model in partnership with Capital Markets</li>
+          <li>Built an ensemble model to detect fraudulent calls into the RBC Advice Center</li>
+          <li>Built a time series model forecasting wire transfer volumes with 94% accuracy</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="xp-row">
+      <div class="xp-date">MAY 2018<br/><b>AUG 2018</b></div>
+      <div class="xp-body">
+        <div class="role">Data Scientist Intern <span class="at">—</span> Amplify</div>
+        <div class="co">Royal Bank of Canada</div>
+        <ul>
+          <li>Developed an active learning model to detect criminal transactions within e-transfers — patent filed</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div class="tag"><span>02</span> / PRJ</div>
       <h2>Projects</h2>
-      <p style="font-size: 0.875rem; color: var(--muted);">More coming soon.</p>
-    </section>
+    </div>
+    <p class="soon">A few in the drawer. Coming soon.</p>
+  </section>
 
-    <section>
+  <section class="section">
+    <div class="section-head">
+      <div class="tag"><span>03</span> / EDU</div>
       <h2>Education</h2>
-      <div class="experience-item">
-        <div class="role">Hon. B.Sc, Computer Science Specialist (ML &amp; AI)</div>
-        <div class="company-line">University of Toronto &middot; <span>2015 – 2019</span></div>
+    </div>
+    <div class="edu-row">
+      <div class="edu-date">2015<br/><b>2019</b></div>
+      <div>
+        <div class="degree">Hon. B.Sc, Computer Science Specialist <span style="color:var(--muted);font-weight:400">— ML &amp; AI</span></div>
+        <div class="school">University of Toronto</div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      &copy; 2026 Keros Rodrigues
-    </footer>
-  </main>
+  <footer>
+    &copy; 2026 Keros Rodrigues
+  </footer>
+
+</main>
 </body>
 </html>
