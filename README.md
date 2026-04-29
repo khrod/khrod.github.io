@@ -1,62 +1,24 @@
 # khrod.github.io
 
-Personal website, still a work in progress...
+Personal website for Keros Rodrigues, hosted on [GitHub Pages](https://khrod.github.io/).
 
-## About
+## Stack
 
-I'm Keros Rodrigues, a machine learning specialist pasionate about AI safety.
+Plain HTML/CSS. No frameworks, no build step.
 
-## Projects
+## Structure
 
-### Professional
-
-*Projects worked on as part of my job/class*
-
-[**Contact Centre Fraud** - Mitigating the risks of fraudlent calls into the RBC Contact Centre ](https://khrod.github.io/)
-
-[**Transfer Volume Predictions** - Predicting transfer volumes to reduce colateral of high value payments](https://khrod.github.io/)
-
-[**Autonomous Driving** - Deep learning models for autonomous driving tasks](https://khrod.github.io/)
-
-[**inQuery** - Machine learning model and investigative tool created to tackle financial crime](https://khrod.github.io/)
-
-[**Microdrop** - Using microfludic technology to detect Ebola](https://khrod.github.io/)
-
-### Personal
-
-*Projects I've worked on for fun*
-
-[**Dithering** - Investigating the use of dithering to binarize image data and it's effects on convolutional neural networks](https://khrod.github.io/)
-
-## Experience
-
-*My past and present work experience*
-
-**Machine Learning Researcher @ RBC**
-
-[Devloper/Data Scientist @ RBC Amplify](https://www.utoronto.ca/news/u-t-students-awarded-rbc-amplify-s-most-disruptive-prize-ai-used-monitoring-e-transfers)
-
-Teaching Assistant @ University of Toronto
-
-Software/Hardware Developer @ Wheeler Microfluidics Lab
-
-Developer @ RBC
-
-## Volunteering
-
-*My past and present volunteering experience*
-
-First-Year Computer Science Peer Mentor @ University of Toronto
-
-[Mentor @ Ladies Learning Code](https://notablelife.com/python-ladies-learning-code/)
-
-## Blog
-*TODO*
+```
+index.html              # Homepage — bio, experience, education
+writing/
+  index.html            # Writing index
+  *.html                # Individual posts
+assets/                 # Local-only files (resume PDF, etc.)
+drafts/                 # Unpublished writing drafts
+```
 
 ## Links
-[LinkedIn](https://www.linkedin.com/in/keros-rodrigues/)
 
-[GitHub](https://github.com/khrod/)
-
-## Contact
-keroshrod[at]gmail[dot]com
+- [LinkedIn](https://www.linkedin.com/in/keros-rodrigues/)
+- [GitHub](https://github.com/khrod/)
+- [Email](mailto:keroshrod@gmail.com)
